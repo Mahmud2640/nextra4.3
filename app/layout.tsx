@@ -4,22 +4,54 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 
 export const metadata = {
-  title: "My Cool Docs Site",
+  title: "MYNZTRIP API Documentation",
+  description: "MYNZTRIP API documentation for developers.",
+  authors: [{ name: "NZITECH TEAM" }],
+  themeColor: "#0011ff",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "MYNZTRIP API DOCS",
+    description: "Explore and integrate with the mynztrip API efficiently.",
+    url: "https://documentation.mynztrip.com",
+    type: "website",
+    images: [
+      {
+        url: "https://documentation.mynztrip.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "mynztrip api image",
+      },
+    ],
+  },
 };
 
 const banner = (
-  <Banner storageKey="some-key">My Project 1.0.0 is released 🎉</Banner>
+  <Banner storageKey="2.0-release">🎉 mynztrip 2.0 API is released.</Banner>
 );
 const navbar = (
   <Navbar
-    logo={<b>🦐 My Cool Project</b>}
-    logoLink={"https://bhavyadang.in"}
-    projectLink="https://github.com/bhavya-dang"
-    chatLink="https://discord.gg/"
-  />
+    logo={
+      <span style={{ color: "blue", fontSize: "35px", fontWeight: "bold" }}>
+        mynztrip
+      </span>
+    }
+    logoLink="https://mynztrip.com"
+    projectLink="https://github.com/nz-world-travels/nz-world-travels"
+    chatLink="https://wa.me/+60184009990?text=Hello%20I%20need%20help%20with%20the%20API"
+    chatIcon={
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        style={{ height: "30px", width: "30px" }}
+      />
+    }
+  ></Navbar>
 );
+
 const footer = (
-  <Footer>MIT {new Date().getFullYear()} © My Cool Project.</Footer>
+  <Footer>© {new Date().getFullYear()} ❤️ Built by NZiTech</Footer>
 );
 
 const search = <Search placeholder="Search docs.."></Search>;
@@ -30,30 +62,18 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      // Not required, but good for SEO
-      lang="en"
-      // Required to be set
-      dir="ltr"
-      // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
-      suppressHydrationWarning
-    >
-      <Head
-      // ... Your additional head options
-      >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
-      </Head>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <Head></Head>
       <body>
         <Layout
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/bhavya-dang/my-project"
+          docsRepositoryBase="https://github.com/nz-world-travels/nz-world-travels"
           footer={footer}
           search={search}
           editLink={null}
           feedback={{ content: null }}
-          // ... Your additional layout options
         >
           {children}
         </Layout>
