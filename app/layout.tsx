@@ -37,7 +37,7 @@ const navbar = (
         mynztrip
       </span>
     }
-    logoLink="https://mynztrip.com"
+    logoLink="/"
     projectLink="https://github.com/nz-world-travels/nz-world-travels"
     chatLink="https://wa.me/+60184009990?text=Hello%20I%20need%20help%20with%20the%20API"
     chatIcon={

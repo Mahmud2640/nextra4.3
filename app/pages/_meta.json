@@ -1,0 +1,10 @@
+{
+  "index": {
+    "title": "Welcome",
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "demo": "Get Started",
+  "demo2": "Demo2"
+}
